@@ -1,0 +1,27 @@
+<table id="products">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>ADDRESS</th>
+      <th>PHONE</th>
+      <th>EMAIL</th>
+      <th>DETAIL</th>
+      <th>DELETE</th>
+    </tr>
+  </thead>
+  <tbody  *ngFor="let hero of heroes">
+    <tr>
+      <td>{{ hero.id }}</td>
+      <td>{{ hero.name }}</td>
+      <td>{{ hero.address }}</td>
+      <td>{{ hero.phone }}</td>
+      <td>{{ hero.email }}</td>
+      <td>
+        <a mat-button color="primary" title="Detail Hero" routerLink="/detail/{{hero.id}}">Detail</a>
+      </td>
+      <td><button mat-button color="warn" title="delete hero" (click)="delete(hero)">x</button></td>
+    </tr>
+  </tbody>
+
+</table>

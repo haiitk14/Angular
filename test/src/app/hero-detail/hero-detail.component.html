@@ -1,0 +1,23 @@
+<div *ngIf="hero">
+  <h2>{{ hero.name | uppercase }} Info</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:</label>
+     <input [(ngModel)]="hero.name" placeholder="name"/>
+  </div>
+  <div>
+    <label>address:</label>
+     <input [(ngModel)]="hero.address" placeholder="adderess"/>
+  </div>
+  <div>
+    <label>phone:</label>
+     <input [(ngModel)]="hero.phone" placeholder="phone"/>
+  </div>
+  <div>
+    <label>email:</label>
+     <input [(ngModel)]="hero.email" placeholder="email"/>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+
+</div>
